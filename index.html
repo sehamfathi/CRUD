@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="m-auto py-4 w-75 ">
+      <h3 class=" text-center text-info py-3">
+        Product Mangment System
+      </h2>
+      <div>
+      <label for="productInputName">productName:</label>
+      <input oninput="valitionProuductName()" type="text" class="form-control mb-2" id="productInputName" />
+      <div class="invalid-feedback">
+        Please Start with Capital letter and after that from 3 to 8 letter.
+      </div>
+      </div>
+      <div>
+      <label for="productInputPrice">productPrice:</label>
+      <input type="number" class="form-control mb-2" required id="productInputPrice" />
+      <div class="invalid-feedback">
+        Please provide the price.
+      </div>
+    </div>
+      <label for="productInputCategory">productCategory:</label>
+      <input type="text" class="form-control mb-2" id="productInputCategory" />
+
+      <label for="productInputDescription">productDescription:</label>
+      <textarea
+        type="text"
+        class="form-control mb-2"
+        id="productInputDescription"
+      ></textarea>
+      <button id="btnAdd"  onclick="addProduct()" class="btn btn-outline-info">Add Product</button>
+      <button  onclick=" clearForm();" class=" ms-2 btn btn-outline-info">Reset</button>
+   
+    </div>
+    <!-- <p><mark class="bg-warning">ffffffffffffffff</mark> -->
+
+    </p>
+    <input oninput="searchProduct(this.value)" type="text" class="form-control my-3 w-75 mx-auto" placeholder="Search by name">
+    <table class="mx-auto  w-75">
+      <thead>
+        <th>index</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Desription</th>
+        <th>Update</th>
+        <th>Delete</th>
+
+
+      </thead>
+      <tbody id="tableData">
+        
+      </tbody>
+    </table>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+<!-- <mark <mark  class="bg-warning">  </mark> -->
